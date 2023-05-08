@@ -1,2 +1,6 @@
 /Train
 /__pycache__
+/build
+/dist
+MCTThermalFace.egg-info/
+setup.py
