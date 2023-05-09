@@ -2,5 +2,7 @@
 /__pycache__
 /build
 /dist
-MCTThermalFace.egg-info/
 setup.py
+mctthermalface.egg-info
+mctthermalface/__pycache__/
+

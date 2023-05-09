@@ -34,11 +34,15 @@ class Detector:
             img = np.array(img)
 
         self.original_shape = img.shape[:2]
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        
+        if len(img.shape) == 3 and img.shape[2] == 3:  # Check if the image has 3 channels
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            
         img = cv2.resize(img, (160, 160))
         img = torch.from_numpy(img).unsqueeze(0).float()
         img = img / 255.0
         return [img]
+
 
     def resize_bbox(self, bbox):
         scale_y, scale_x = np.array(self.original_shape) / np.array([160, 160])
