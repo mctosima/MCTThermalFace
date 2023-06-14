@@ -52,7 +52,7 @@ bbox = detector.detect(img_1channel)
 ### Bounding Box Format
 
 ```
-bbox = [xmax, xmin, ymax, ymin]
+bbox = [xmin, xmax, ymin, ymax]
 ```
 
 <br>
